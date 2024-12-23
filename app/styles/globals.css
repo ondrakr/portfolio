@@ -71,6 +71,14 @@ a {
   transform: rotate(-47.166deg);
   position: absolute;
   overflow: hidden;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .glow {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(0, 3, 25, 0.00) 100%);
+  }
+  
 }
 
 .button-style {
