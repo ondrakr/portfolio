@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        modra: "#000319",
+        fialova: "#CBACF9",
+      },
+      borderColor: {
+        '03': 'rgba(255, 255, 255, 0.03)',
+        '10': 'rgba(255, 255, 255, 0.10)',
+      },
+      backgroundImage: {
+        'linear': 'linear-gradient(90deg, #04071D 0%, #0C0E23 100%)',
       },
     },
   },

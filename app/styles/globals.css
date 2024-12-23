@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", serif;
+  background-color: #000319;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1130px, 100%);
+  padding: 0 2rem;
+}
+
+.container-zkusenosti {
+  width: min(1265px, 100%);
+  padding: 0 2rem;
+}
+
+.programs-container {
+  width: min(1400px, 100%);
+  padding: 0 2rem;
+}
+
+.navbar {
+  width: min(1400px, 100%);
+  padding: 0 2rem;
+}
+
+/* Skrytí scrollbaru */
+.programs-container::-webkit-scrollbar {
+  display: none; /* Skryje scrollbar ve WebKit prohlížečích (Chrome, Safari) */
+}
+
+.relative {
+  -ms-overflow-style: none;  /* Skryje scrollbar v IE */
+  scrollbar-width: none; /* Skryje scrollbar v Firefoxu */
+}
+
+@layer utilities {
+  .zkusenosti-shadow {
+    filter: drop-shadow(0px 0px 29.3px #CBACF9);
+  }
+}
+
+/* styles.css */
+.glow {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.11) 0%, rgba(0, 3, 25, 0.00) 100%);
+  width: 329.264px;
+  height: 1176.763px;
+  transform: rotate(-47.166deg);
+  position: absolute;
+  overflow: hidden;
+}
+
+.button-style {
+   background: linear-gradient(90deg, #1C1E3C 0%, #0F122B 81.67%);
+   transition: all 0.3s ease; 
+}
+
+.button-style:hover {
+  background: linear-gradient(90deg, #1C1E3C 60%, #0F122B 100%);
+}
