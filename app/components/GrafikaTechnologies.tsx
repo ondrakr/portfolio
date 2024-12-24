@@ -9,9 +9,9 @@ interface CardProps {
 
 function Card({ title, image }: CardProps) {
   return (
-    <div className="bg-linear rounded-2xl p-6 text-center border border-10 flex flex-col items-center gap-6 w-[200px] h-[180px]">
-      <img src={image} alt={title} className='h-12'/>
-      <p className="text-lg text-white font-medium tracking-wide w-[80%]" dangerouslySetInnerHTML={{ __html: title }}></p>
+    <div className="bg-linear rounded-2xl p-6 text-center border border-10 flex flex-col items-center gap-4 md:gap-6 w-[150px] h-[140px] md:w-[200px] md:h-[180px]">
+      <img src={image} alt={title} className='h-8 md:h-12'/>
+      <p className="text-sm md:text-lg text-white font-medium tracking-wide w-[90%] md:w-[80%]" dangerouslySetInnerHTML={{ __html: title }}></p>
     </div>
   );
 }
@@ -85,12 +85,12 @@ export default function Grafika() {
   };
 
   return (
-    <div className='my-32'>
+    <div className='my-16 md:my-32'>
       {/* Grafické programy */}
-      <p className='text-4xl text-white text-center font-semibold mb-16'>Grafické programy</p>
+      <p className='text-3xl md:text-4xl text-white text-center font-semibold mb-8 md:mb-16'>Grafické programy</p>
       <div className="flex justify-center items-center programs-container mx-auto">
         <button
-          className="text-white p-6"
+          className="text-white p-4 md:p-6"
           onClick={handlePrevClick}
         >
           {<ArrowLeft />}
@@ -105,7 +105,7 @@ export default function Grafika() {
           </div>
         </div>
         <button
-          className="text-white p-6"
+          className="text-white p-4 md:p-6"
           onClick={handleNextClick}
         >
           {<ArrowRight />}
@@ -113,10 +113,10 @@ export default function Grafika() {
       </div>
 
       {/* Technologie */}
-      <p className='text-4xl text-white text-center font-semibold mb-16 mt-24'>Technologie</p>
+      <p className='text-3xl md:text-4xl text-white text-center font-semibold mb-8 md:mb-16 mt-16 md:mt-24'>Technologie</p>
       <div className="flex justify-center items-center programs-container mx-auto">
         <button
-          className="text-white p-6"
+          className="text-white p-4 md:p-6"
           onClick={handlePrevClickTech}
         >
           {<ArrowLeft />}

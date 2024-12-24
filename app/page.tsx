@@ -22,7 +22,7 @@ export default function Home() {
       <Grafika />
       <Projects />
       <Zkusenosti />
-      <Reference />
+      {/* <Reference /> */}
       <Contact />
     </div>
   );

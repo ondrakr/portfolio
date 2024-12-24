@@ -14,19 +14,19 @@ const Projekt: React.FC<ProjectsProps> = ({ jmeno, obsah, fotka, odkaz, index })
   const isRightAligned = index % 2 !== 0; // Zarovnej doprava, pokud je index lichý
   return (
     <div
-      className={`reference-card flex flex-col lg:flex-row items-center gap-8 lg:gap-24 my-0 ${
+      className={`reference-card flex flex-col-reverse lg:flex-row items-center gap-0 lg:gap-24 ${
         isRightAligned ? "lg:flex-row-reverse" : ""
       }`}
     >
       <div
-        className={`flex-1 flex flex-col gap-4 ${
-          isRightAligned ? "items-end text-right" : "items-start text-left"
+        className={`flex-1 flex flex-col gap-4 mx-2 sm:mx-20 lg:mx-0 ${
+          isRightAligned ? "items-start lg:items-end text-left lg:text-right" : "items-start text-left"
         }`}
       >
         <h3 className="font-bold text-white text-3xl sm:text-4xl mt-4">{jmeno}</h3>
         <div
           className={`bg-fialova h-1 w-32 mx-auto ${
-            isRightAligned ? "lg:ml-auto" : "lg:mr-auto"
+            isRightAligned ? "ml-0 lg:ml-auto" : "ml-0 lg:mr-auto"
           }`}
         ></div>
         <p className="text-white text-sm sm:text-md font-light mt-4">{obsah}</p>
@@ -35,7 +35,7 @@ const Projekt: React.FC<ProjectsProps> = ({ jmeno, obsah, fotka, odkaz, index })
         </div>
       </div>
       <div
-        className={`w-full lg:w-[30rem] h-auto ${
+        className={`w-[90%] sm:w-[30rem] h-auto ${
           isRightAligned ? "flip-horizontal" : ""
         }`}
       >

@@ -36,7 +36,7 @@ export default function Zkusenosti() {
         </p>
         <div className="flex flex-col justify-center items-center container-zkusenosti mx-auto">
             {experiences.map((experience, index) => (
-                <div key={index} className="flex flex-col sm:flex-row items-start mb-16 gap-8 sm:gap-12">
+                <div key={index} className="flex flex-col sm:flex-row items-start mb-16 gap-8 sm:gap-12 mx-6 md:mx-0">
                   <p className='text-white bg-linear px-6 py-4 rounded-xl whitespace-nowrap self-start'>{experience.duration}</p>
                   <div className="flex items-start gap-8">
                     <div className="relative flex items-start">

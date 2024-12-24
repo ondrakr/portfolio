@@ -11,9 +11,9 @@ interface CardProps {
 
 function Card({ title, icon }: CardProps) {
   return (
-    <div className="bg-linear shadow-md rounded-2xl px-6 pb-10 pt-8 text-center border border-10 flex flex-col items-center gap-6 w-full mt-12"> 
-      <span className='h-[7rem] flex items-center justify-center'>{icon}</span>
-      <p className="text-2xl sm:text-3xl text-white font-bold mb-4 w-full tracking-wide" dangerouslySetInnerHTML={{ __html: title }}></p>
+    <div className="bg-linear shadow-md rounded-2xl px-6 pb-10 pt-8 text-center border border-10 flex flex-col items-center gap-6 w-full"> 
+      <span className='h-[6rem] md:h-[7rem] flex items-center justify-center'>{icon}</span>
+      <p className="text-xl sm:text-3xl text-white font-bold mb-2 md:mb-4 w-full tracking-wide" dangerouslySetInnerHTML={{ __html: title }}></p>
       <Button content="MÁM ZÁJEM" color={false}/>
     </div>
   );
