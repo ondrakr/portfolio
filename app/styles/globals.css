@@ -95,4 +95,78 @@ a {
   backdrop-filter: blur(14px);
   box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.09) inset;
   padding: 4rem 0;
+}/* Styl pro pozadí modálního okna */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Poloprůhledné pozadí */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+
+}
+
+/* Styl pro samotné modální okno */
+.modal {
+  border-radius: 25px;
+  background: rgba(0, 3, 25, 0.83);
+  box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  padding: 55px;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 1000px;
+  height: 80vh;
+  overflow: auto;
+  text-align: center;
+  color: white;
+  max-height: 90%; /* Zajišťuje, že modal bude mít maximální výšku */
+}
+
+
+
+/* Tlačítko pro zavření modalu */
+.close-button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.close-button:hover {
+  background-color: #ff0000;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  padding-right: 17px;
+}
+
+::-webkit-scrollbar {
+  width: 6px; 
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: inherit; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBACF9;;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a78dce;;
 }

@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Odkaz from "../../public/icons/Odkaz";
 import Hvezda from "../../public/icons/Hvezda";
+import Ctverec from "@/public/icons/Ctverec";
 
 export default function Header() {
     return (
@@ -34,17 +35,16 @@ export default function Header() {
   <rect width="1852" height="826" fill="url(#gradient-overlay)" />
 </svg>
 
+<div className="absolute z-20" style={{ top: 190, left: 189 }}><Hvezda /></div>
+<div className="absolute z-20" style={{ top: 88, right: 204, opacity: 0.3 }}><Hvezda /></div> 
+<div className="absolute z-20" style={{ top: 603, right: 307, opacity: 0.5 }}><Hvezda /></div>
+
+<div className="absolute z-20" style={{ top: 103, left: 308 }}><Ctverec /></div>
+<div className="absolute z-20" style={{ top: 206, right: 118, opacity: 0.6 }}><Ctverec /></div>
+<div className="absolute z-20" style={{ bottom: 310, left: 103, opacity: 0.4 }}><Ctverec /></div>
+
 </div>
 
-<div className="absolute z-20" style={{ top: 90, left: 189 }}>
-<Hvezda />
-</div>
-<div className="absolute z-20" style={{ top: -13, right: 194, opacity: 0.3 }}>
-<Hvezda />
-</div>
-<div className="absolute z-20" style={{ top: 500, right: 297, opacity: 0.5 }}>
-<Hvezda />
-</div>
 
 
 <div className="glow" style={{ top: -600, left: -200 }}></div>

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "RODIČÁKY bez chaosu!",
-  description: "Rezervace schůzek na pár kliknutí – rychle, snadno, online!",
+  title: "Ondřej Krejčí",
+  description: "Fullstack developer & designer",
 };
 
 export default function RootLayout({

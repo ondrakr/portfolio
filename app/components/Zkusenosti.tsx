@@ -10,21 +10,33 @@ interface Experience {
 const experiences: Experience[] = [
     {
         duration: '2024 - současnost',
-        company: 'coalfamily',
-        position: 'web developer',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu. Fusce wisi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.',
+        company: 'POINT.X',
+        position: 'front-end developer',
+        description: 'V POINT.X působím jako front-end developer se specializací na implementaci responzivního designu v rámci aplikací vyvíjených v jazyce Angular či VUE.js.',
     },
     {
       duration: '2024 - současnost',
-      company: 'coalfamily',
-      position: 'web developer',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu. Fusce wisi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.',
+      company: 'Integritas.ai',
+      position: 'UX/UI designer & frond-end developer',
+      description: 'Ve společnosti Integritas.ai se zaměřuji na vývoj uživatelského rozhraní (UI), uživatelské zkušenosti (UX) a responzivního designu aplikací. Při své práci využívám technologie jako MySQL, PHP a framework Bootstrap.',
   },
   {
     duration: '2024 - současnost',
     company: 'coalfamily',
-    position: 'web developer',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu. Fusce wisi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.',
+    position: 'web developer & designer & social media manager',
+    description: 'V rámci společnosti coalfamily se starám o design a vývoj webových stránek v technologiích jako je React či Chakra UI. Dále se věnuji správě sociálních sítí a tvorbě obsahu pro marketingové kampaně.',
+  },
+  {
+    duration: '2022 - současnost',
+    company: 'CERMAT',
+    position: 'full-stack developer',
+    description: 'Ve státní organizaci CERMAT jsem vytvořil webovou stránku TAU, která slouží k procvičování testů přijímacích zkoušek a maturit. Dále jsem tvůrce informačního webu prihlaskynastredni.cz, který byl v roce 2024 klíčovým zdrojem informací pro uchazeče o střední školy.',
+  },
+  {
+    duration: '2022 - současnost',
+    company: 'Veterán Cup Letohrad',
+    position: 'marketing and media coordinator',
+    description: 'V rámci charitativní akce Veterán Cup Letohrad se starám o marketingové aktivity a spravuji sociální sítě. Nejdříve jsem celé akci vytvořil logo i webové stránky, o které se nyní také starám.',
   },
 ];
 
@@ -45,7 +57,7 @@ export default function Zkusenosti() {
                     </div>
                     <div className='flex flex-col gap-2'>
                         <h3 className="font-bold text-white text-2xl sm:text-4xl">{experience.company}</h3>
-                        <p className="text-lg font-light text-lg text-fialova">{experience.position} ({experience.duration})</p>
+                        <p className="text-lg font-light text-lg text-fialova">{experience.position}</p>
                         <p className="text-white text-sm sm:text-md font-light mt-4">{experience.description}</p>
                     </div>
                   </div>
