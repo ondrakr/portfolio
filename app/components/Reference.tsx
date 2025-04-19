@@ -11,7 +11,7 @@ interface ReferenceProps {
 
 const Reference: React.FC<ReferenceProps> = ({ jmeno, firma, citace, fotka }) => {
   return (
-    <div className="reference-card flex flex-col sm:flex-row items-center sm:items-start space-y-8 sm:space-y-0 sm:space-x-16 my-16">
+    <div className="reference-card flex flex-col sm:flex-row items-center sm:items-start space-y-8 sm:space-y-0 sm:space-x-16 my-16" id="reference">
       <div className="flex items-center space-x-2">
         {[...Array(5)].map((_, index) => (
           <span key={index} className="text-fialova"><Star /></span>
@@ -34,13 +34,7 @@ export default function Zkusenosti() {
     {
       jmeno: 'Filip Červinka',
       firma: 'ředitel marketingu, coalfamily',
-      citace: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu. Fusce wisi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.',
-      fotka: './images/filip-cervinka.jpg',
-    },
-    {
-      jmeno: 'Martin Motyčka',
-      firma: 'hlavní organizátor, Veterán Cup Letohrad',
-      citace: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu. Fusce wisi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.',
+      citace: 'Ondra je skvělým partnerem pro naše projekty. Jeho designové přístupy jsou originální a vynikajícím způsobem přilákají pozornost. Jeho práce je vždy na vysoké úrovni a dodává našim projektům originální a moderní vzhled.',
       fotka: './images/filip-cervinka.jpg',
     },
   ];

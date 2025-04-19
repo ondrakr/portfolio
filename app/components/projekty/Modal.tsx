@@ -30,14 +30,16 @@ export default function Modal({ title, sections }: ModalProps) {
 
           {/* Obrázky s popisky */}
           {section.images.length > 0 && (
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {section.images.map((image, idx) => (
                 <div key={idx} className="flex flex-col items-left">
-                  <img
-                    src={image.src}
-                    alt={image.caption}
-                    className="w-full h-auto rounded-md "
-                  />
+                  <div className="relative">
+                    <img
+                      src={image.src}
+                      alt={image.caption}
+                      className="w-full h-auto rounded-md pointer-events-none"
+                    />
+                  </div>
                   {image.caption && (
                     <span className="text-[0.7rem] font-light mt-2 italic">{image.caption} </span>
                   )}

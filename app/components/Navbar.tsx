@@ -13,6 +13,17 @@ export default function Navbar() {
     setIsMenuOpen(false);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      closeMenu();
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className="relative">
       <div className="flex justify-between items-center md:bg-[#0B0D22] px-12 py-5 md:border md:border-03 rounded-3xl w-fit pointer md:mx-auto ml-auto mt-8 md:mt-20">
@@ -23,10 +34,18 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex space-x-10">
-          <p className="text-white">O mně</p>
-          <p className="text-white">Projekty</p>
-          <p className="text-white">Reference</p>
-          <p className="text-white">Kontakt</p>
+          <p className="text-white cursor-pointer" onClick={() => scrollToSection('nabidka')}>
+            Nabídka
+          </p>
+          <p className="text-white cursor-pointer" onClick={() => scrollToSection('projekty')}>
+            Projekty
+          </p>
+          <p className="text-white cursor-pointer" onClick={() => scrollToSection('zkusenosti')}>
+            Zkušenosti
+          </p>
+          <p className="text-white cursor-pointer" onClick={() => scrollToSection('kontakt')}>
+            Kontakt
+          </p>
         </div>
       </div>
 
@@ -39,16 +58,16 @@ export default function Navbar() {
             <AiOutlineClose size={30} />
           </button>
           <div className="text-center flex flex-col gap-10">
-            <p className="cursor-pointer" onClick={closeMenu}>
-              O mně
+            <p className="cursor-pointer" onClick={() => scrollToSection('nabidka')}>
+              Nabídka
             </p>
-            <p className="cursor-pointer" onClick={closeMenu}>
+            <p className="cursor-pointer" onClick={() => scrollToSection('projekty')}>
               Projekty
             </p>
-            <p className="cursor-pointer" onClick={closeMenu}>
-              Reference
+            <p className="cursor-pointer" onClick={() => scrollToSection('zkusenosti')}>
+              Zkušenosti
             </p>
-            <p className="cursor-pointer" onClick={closeMenu}>
+            <p className="cursor-pointer" onClick={() => scrollToSection('kontakt')}>
               Kontakt
             </p>
           </div>

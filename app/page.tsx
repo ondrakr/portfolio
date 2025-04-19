@@ -2,28 +2,24 @@
 
 import Header from "./components/Header";
 import Nabidka from "./components/Nabidka";
-import Grafika from "./components/GrafikaTechnologies";
+import GrafikaTechnologies from "./components/GrafikaTechnologies";
 import Zkusenosti from "./components/Zkusenosti";
-import Reference from "./components/Reference";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div>
-      <div className="z-100">
+    <main className="relative m-0 p-0 overflow-hidden">
+
       <Navbar />
-      </div>
-      <div className="relative">
       <Header />
-      </div>
-      <Nabidka />
-      <Grafika />
-      <Projects />
-      <Zkusenosti />
-      {/* <Reference /> */}
-      <Contact />
-    </div>
+        <Nabidka />
+        <GrafikaTechnologies />
+        <Projects />
+        <Zkusenosti />
+        {/*<Reference />*/}
+        <Contact />
+    </main>
   );
 }

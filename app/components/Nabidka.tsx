@@ -10,18 +10,28 @@ interface CardProps {
 }
 
 function Card({ title, icon }: CardProps) {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('kontakt');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className="bg-linear shadow-md rounded-2xl px-6 pb-10 pt-8 text-center border border-10 flex flex-col items-center gap-6 w-full"> 
       <span className='h-[6rem] md:h-[7rem] flex items-center justify-center'>{icon}</span>
       <p className="text-xl sm:text-3xl text-white font-bold mb-2 md:mb-4 w-full tracking-wide" dangerouslySetInnerHTML={{ __html: title }}></p>
-      <Button content="MÁM ZÁJEM" color={false}/>
+      <Button content="MÁM ZÁJEM" color={false} onClick={scrollToContact}/>
     </div>
   );
 }
 
 export default function Nabidka() {
   return (
-    <div className="my-32 container mx-auto">
+    <div className="my-32 container mx-auto" id="nabidka">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 lg:gap-12">
         <Card
           title="WEBOVÉ<br/>STRÁNKY"

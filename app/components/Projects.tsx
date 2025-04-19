@@ -22,6 +22,7 @@ const Projekt: React.FC<ProjectsProps> = ({ jmeno, obsah, fotka, link, linkTitle
   return (
     <div
       className={`reference-card flex flex-col-reverse lg:flex-row items-center gap-0 lg:gap-24 ${isRightAligned ? "lg:flex-row-reverse" : ""}`}
+      data-project={jmeno === "Veterán Cup Letohrad" ? "veteran-cup" : undefined}
     >
       <div
         className={`flex-1 flex flex-col gap-4 mx-2 sm:mx-20 lg:mx-0 ${isRightAligned ? "items-start lg:items-end text-left lg:text-right" : "items-start text-left"}`}
@@ -137,7 +138,7 @@ export default function Projects() {
   }, [isModalOpen]);
 
   return (
-    <div className="mt-20">
+    <div className="mt-20" id="projekty">
       <p className="text-3xl sm:text-5xl text-white text-center font-bold mb-16 mt-24">
         Mé projekty
       </p>
@@ -148,7 +149,7 @@ export default function Projects() {
             {...project}
             index={index}
             onShowModal={handleShowModal}
-            modalComponent={project.modalComponent} // Pass the modal component dynamically
+            modalComponent={project.modalComponent}
           />
         ))}
       </div>

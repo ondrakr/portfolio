@@ -90,12 +90,12 @@ export default function Grafika() {
       <p className='text-3xl md:text-4xl text-white text-center font-semibold mb-8 md:mb-16'>Grafické programy</p>
       <div className="flex justify-center items-center programs-container mx-auto">
         <button
-          className="text-white p-4 md:p-6"
+          className="text-white p-4 md:p-6 shrink-0"
           onClick={handlePrevClick}
         >
           {<ArrowLeft />}
         </button>
-        <div className="relative w-full overflow-x-auto" ref={containerRef} style={{ scrollBehavior: 'smooth' }}>
+        <div className="relative w-full overflow-x-auto hide-scrollbar" ref={containerRef} style={{ scrollBehavior: 'smooth' }}>
           <div className="flex gap-6">
             {cardsGrafika.map((card, index) => (
               <div className="flex-shrink-0" key={index}>
@@ -105,7 +105,7 @@ export default function Grafika() {
           </div>
         </div>
         <button
-          className="text-white p-4 md:p-6"
+          className="text-white p-4 md:p-6 shrink-0"
           onClick={handleNextClick}
         >
           {<ArrowRight />}
@@ -116,12 +116,12 @@ export default function Grafika() {
       <p className='text-3xl md:text-4xl text-white text-center font-semibold mb-8 md:mb-16 mt-16 md:mt-24'>Technologie</p>
       <div className="flex justify-center items-center programs-container mx-auto">
         <button
-          className="text-white p-4 md:p-6"
+          className="text-white p-4 md:p-6 shrink-0"
           onClick={handlePrevClickTech}
         >
           {<ArrowLeft />}
         </button>
-        <div className="relative w-full overflow-x-auto" ref={containerRefTech} style={{ scrollBehavior: 'smooth' }}>
+        <div className="relative w-full overflow-x-auto hide-scrollbar" ref={containerRefTech} style={{ scrollBehavior: 'smooth' }}>
           <div className="flex gap-6">
             {cardsTechnologie.map((card, index) => (
               <div className="flex-shrink-0" key={index}>
@@ -131,7 +131,7 @@ export default function Grafika() {
           </div>
         </div>
         <button
-          className="text-white p-6"
+          className="text-white p-4 md:p-6 shrink-0"
           onClick={handleNextClickTech}
         >
           {<ArrowRight />}

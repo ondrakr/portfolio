@@ -5,22 +5,27 @@ import Ctverec from "@/public/icons/Ctverec";
 
 export default function Header() {
     return (
-      <div className="flex flex-col justify-center items-center">
+      <section className="flex flex-col justify-center items-center" aria-label="Úvodní sekce">
         <div className="z-90 mt-6">
-        <div className="mt-32 flex flex-col justify-center items-center gap-4">
-            <p className="text-center text-md sm:text-md md:text-lg lg:text-xl font-regular tracking-widest text-white opacity-70">
-            FULL-STACK DEVELOPER & DESIGNER
-            </p>
-            <h1 className="text-[2rem] sm:text-[2rem] md:text-[3rem] lg:text-[4rem] xl:text-[5rem] text-white font-bold leading-[110%] text-center mx-3 w-[80%]">
-            Začíná to myšlenkou, končí kódem a&nbsp;vizuální identitou <span className="text-fialova">na míru</span>
+          <div className="mt-32 flex flex-col justify-center items-center gap-4">
+            <h1 className="text-[4rem] sm:text-[4rem] md:text-[5rem] lg:text-[7rem] xl:text-[8.5rem] text-white font-bold leading-[110%] text-center mx-6">
+              <span className="sr-only">Full-stack Developer - </span>
+              ONDŘEJ KREJČÍ
             </h1>
-            <p className="text-center text-lg sm:text-lg md:text-xl lg:text-2xl font-regular tracking-widest text-white opacity-70 mt-3">
-            ONDŘEJ KREJČÍ
+            <div className="w-[70%] md:w-full h-[3px] bg-fialova mt-1" role="presentation"></div>
+            <p className="text-center text-lg sm:text-lg md:text-xl lg:text-3xl font-regular tracking-widest text-white opacity-70 mt-3 mx-4">
+              FULL-STACK DEVELOPER & DESIGNER
             </p>
-        </div>
-        <div className="mt-16 flex justify-center">
-        <Button content="Napište mi" icon={<Odkaz />} color={true}></Button>
-        </div>
+          </div>
+          <div className="mt-24 flex justify-center">
+            <Button 
+              content="Napište mi" 
+              icon={<Odkaz />} 
+              color={true} 
+              onClick={() => window.location.href = 'mailto:ondrakrejci83@seznam.cz'}
+              aria-label="Kontaktujte mě emailem"
+            />
+          </div>
         </div>
 
 <div className="w-full overflow-hidden absolute z-[-999] mt-[-2rem]">
@@ -35,13 +40,13 @@ export default function Header() {
   <rect width="1852" height="826" fill="url(#gradient-overlay)" />
 </svg>
 
-<div className="absolute z-20" style={{ top: 190, left: 189 }}><Hvezda /></div>
-<div className="absolute z-20" style={{ top: 88, right: 204, opacity: 0.3 }}><Hvezda /></div> 
-<div className="absolute z-20" style={{ top: 603, right: 307, opacity: 0.5 }}><Hvezda /></div>
+<div className="absolute z-20 top-[190px] md:top-[190px] left-[85px] md:left-[189px]"><Hvezda /></div>
+<div className="absolute z-20 top-[250px] md:top-[88px] right-[30px] md:right-[204px] opacity-30"><Hvezda /></div> 
+<div className="absolute z-20 top-[500px] md:top-[603px] right-[87px] md:right-[307px] opacity-50"><Hvezda /></div>
 
-<div className="absolute z-20" style={{ top: 103, left: 308 }}><Ctverec /></div>
-<div className="absolute z-20" style={{ top: 206, right: 118, opacity: 0.6 }}><Ctverec /></div>
-<div className="absolute z-20" style={{ bottom: 310, left: 103, opacity: 0.4 }}><Ctverec /></div>
+<div className="absolute z-20 hidden md:block" style={{ top: 103, left: 308 }}><Ctverec /></div>
+<div className="absolute z-20 hidden md:block" style={{ top: 206, right: 165, opacity: 0.6 }}><Ctverec /></div>
+<div className="absolute z-20 hidden md:block" style={{ bottom: 310, left: 103, opacity: 0.4 }}><Ctverec /></div>
 
 </div>
 
@@ -54,7 +59,7 @@ export default function Header() {
 <div className="glow" style={{ top: -600, right: -200, transform: 'rotate(45deg)' }}></div>
 <div className="glow" style={{ top: -700, right: 0, transform: 'rotate(45deg)' }}></div>
 <div className="glow" style={{ top: -500, right: -400, transform: 'rotate(45deg)' }}></div>
-    </div>
+    </section>
     );
   }
   
